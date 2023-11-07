@@ -22,7 +22,8 @@ namespace Cookie_Clicker_Murat_Varen
     /// </summary>
     public partial class MainWindow : Window
     {
-        private MediaPlayer tapSoundPlayer = new MediaPlayer();
+        private readonly MediaPlayer tapSoundPlayer = new MediaPlayer();
+        private decimal cookieCounter = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -38,16 +39,19 @@ namespace Cookie_Clicker_Murat_Varen
             };
             ImgCookie.BeginAnimation(Image.MarginProperty, animation);
             RandomTapSound();
-            tapSoundPlayer.Stop();
-            tapSoundPlayer.Play();
+            cookieCounter++;
+            LblCookieCount.Content = $"{cookieCounter.ToString("00")} cookies";
+            this.Title = $"{cookieCounter}";
         }
+
 
         public void RandomTapSound()
         {
             Random random = new Random();
             int number = random.Next(1, 3);
             tapSoundPlayer.Open(new Uri($"Assets/Audio/tap-{number}.wav", UriKind.RelativeOrAbsolute));
-
+            tapSoundPlayer.Stop();
+            tapSoundPlayer.Play();
         }
     }
 }

@@ -20,13 +20,18 @@
             
         <!-- COL 0 -->
         <StackPanel VerticalAlignment="Center">
-            <Label Name="LblCookieCount" Content="Cookie" HorizontalAlignment="Center" FontSize="24"/>
+            <Label Name="LblCookieCount" Content="00 Cookies" HorizontalAlignment="Center" FontSize="24"/>
             <Image Name="ImgCookie" Source="Assets/Images/Cookie.png"  Margin="10" MouseDown="ImgCookie_MouseDown">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
             </Image>
         </StackPanel>
-            
+        
+        <!-- COL 1 -->
+        <Grid Grid.Column="1" Background="AliceBlue" >
+            <Label Content="Cookie Clicker" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"/>
+        </Grid>
+
     </Grid>
 </Window>
