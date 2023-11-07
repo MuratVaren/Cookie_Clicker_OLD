@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cookie_Clicker_Murat_Varen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Cookie Clicker" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center">
+            <Label Name="LblCookieCount" Content="Cookie" HorizontalAlignment="Center" FontSize="24"/>
+            <Image Source="Assets/Images/Cookie.png" Margin="10"/>
+        </StackPanel>
     </Grid>
 </Window>
