@@ -6,23 +6,27 @@
         xmlns:local="clr-namespace:Cookie_Clicker_Murat_Varen"
         mc:Ignorable="d" 
         Title="Cookie Clicker" Height="450" Width="800">
+    <!-- Achtergrond Image -->
     <Window.Background>
         <ImageBrush ImageSource="Assets/Images/background.jpg" Stretch="Fill"/>
     </Window.Background>
+  
     <Grid>
-        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+            
+        <!-- COL 0 -->
         <StackPanel VerticalAlignment="Center">
             <Label Name="LblCookieCount" Content="Cookie" HorizontalAlignment="Center" FontSize="24"/>
-            <Image Source="Assets/Images/Cookie.png" Margin="0">
+            <Image Name="ImgCookie" Source="Assets/Images/Cookie.png"  Margin="10" MouseDown="ImgCookie_MouseDown">
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
             </Image>
         </StackPanel>
+            
     </Grid>
 </Window>

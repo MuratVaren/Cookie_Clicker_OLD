@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
+
 
 namespace Cookie_Clicker_Murat_Varen
 {
@@ -20,9 +22,32 @@ namespace Cookie_Clicker_Murat_Varen
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MediaPlayer tapSoundPlayer = new MediaPlayer();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ImgCookie_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ThicknessAnimation animation = new ThicknessAnimation
+            {
+                To = new Thickness(30),
+                Duration = TimeSpan.FromMilliseconds(100),
+                FillBehavior = FillBehavior.Stop,
+            };
+            ImgCookie.BeginAnimation(Image.MarginProperty, animation);
+            RandomTapSound();
+            tapSoundPlayer.Stop();
+            tapSoundPlayer.Play();
+        }
+
+        public void RandomTapSound()
+        {
+            Random random = new Random();
+            int number = random.Next(1, 3);
+            tapSoundPlayer.Open(new Uri($"Assets/Audio/tap-{number}.wav", UriKind.RelativeOrAbsolute));
+
         }
     }
 }
