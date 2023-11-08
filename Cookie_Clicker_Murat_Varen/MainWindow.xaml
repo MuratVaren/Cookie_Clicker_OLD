@@ -61,10 +61,15 @@
                 <Border Grid.Row="1" Grid.RowSpan="5" Grid.ColumnSpan="3" Background="LightGray">
                 </Border>
 
+                <!-- ROW 0 -->
+                <Label Name="LblPassiveIncome" Grid.Column="0" Content="+0" 
+                       VerticalAlignment="Bottom" FontSize="15"/>
+
                 <!-- ROW 1: POINTER -->
                 <Button Name="BtnPointer" Grid.Row="1" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
-                        Background="Transparent" Click="BtnBuy_Click">
+                        Background="Transparent" Click="BtnBuy_Click" 
+                        IsEnabled="False">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -73,10 +78,10 @@
                         </Grid.ColumnDefinitions>
                         <Image Grid.Column="0" Source="Assets/Images/pointer.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
-                            <Label Content="Pointer" Foreground="White" FontSize="16"/>
-                            <Label Content="15" FontWeight="Bold"/>
+                            <Label Content="Pointer" Foreground="black" FontSize="16"/>
+                            <Label Name="LblPointerPrice" Content="15" FontWeight="Bold"/>
                         </StackPanel>
-                        <Label  Grid.Column="2" Content="0" FontSize="24" 
+                        <Label Name="LblPointerCounter" Grid.Column="2" Content="0" FontSize="24" 
                                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Grid>
                 </Button>
@@ -84,7 +89,8 @@
                 <!-- ROW 2: GRANNY -->
                 <Button Name="BtnGranny" Grid.Row="2" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
-                        Background="Transparent" Click="BtnBuy_Click">
+                        Background="Transparent" Click="BtnBuy_Click"
+                        IsEnabled="False">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -93,7 +99,7 @@
                         </Grid.ColumnDefinitions>
                         <Image Grid.Column="0" Source="Assets/Images/granny.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
-                            <Label Content="granny" Foreground="White" FontSize="16"/>
+                            <Label Content="granny" Foreground="black" FontSize="16"/>
                             <Label Content="100" FontWeight="Bold" />
                         </StackPanel>
                         <Label  Grid.Column="2" Content="0" FontSize="24" 
@@ -104,7 +110,8 @@
                 <!-- ROW 3: FARM -->
                 <Button Name="BtnFarm" Grid.Row="3" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
-                        Background="Transparent" Click="BtnBuy_Click">
+                        Background="Transparent" Click="BtnBuy_Click"
+                        IsEnabled="False">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -113,7 +120,7 @@
                         </Grid.ColumnDefinitions>
                         <Image Grid.Column="0" Source="Assets/Images/farm.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
-                            <Label Content="farm" Foreground="White" FontSize="16"/>
+                            <Label Content="farm" Foreground="black" FontSize="16"/>
                             <Label Content="1100" FontWeight="Bold"/>
                         </StackPanel>
                         <Label  Grid.Column="2" Content="0" FontSize="24" 
@@ -124,7 +131,8 @@
                 <!-- ROW 4: MINE -->
                 <Button Name="BtnMine" Grid.Row="4" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
-                        Background="Transparent" Click="BtnBuy_Click">
+                        Background="Transparent" Click="BtnBuy_Click"
+                        IsEnabled="False">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -133,7 +141,7 @@
                         </Grid.ColumnDefinitions>
                         <Image Grid.Column="0" Source="Assets/Images/mine.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
-                            <Label Content="mine" Foreground="White" FontSize="16"/>
+                            <Label Content="mine" Foreground="black" FontSize="16"/>
                             <Label Content="12000" FontWeight="Bold"/>
                         </StackPanel>
                         <Label  Grid.Column="2" Content="0" FontSize="24"
@@ -144,7 +152,8 @@
                 <!-- ROW 5: FACTORY -->
                 <Button Name="BtnFactory" Grid.Row="5" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
-                        Background="Transparent" Click="BtnBuy_Click">
+                        Background="Transparent" Click="BtnBuy_Click"
+                        IsEnabled="False">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -153,7 +162,7 @@
                         </Grid.ColumnDefinitions>
                         <Image Grid.Column="0" Source="Assets/Images/factory.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
-                            <Label Content="factory" Foreground="White" FontSize="16"/>
+                            <Label Content="factory" Foreground="black" FontSize="16"/>
                             <Label Content="130000" FontWeight="Bold"/>
                         </StackPanel>
                         <Label  Grid.Column="2" Content="0" FontSize="24"
