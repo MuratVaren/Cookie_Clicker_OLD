@@ -53,5 +53,27 @@ namespace Cookie_Clicker_Murat_Varen
             tapSoundPlayer.Stop();
             tapSoundPlayer.Play();
         }
+
+        private void BtnBuy_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            if(button != null)
+            {
+                string btnContent = button.Name.ToString().Replace("Btn","");
+                switch(btnContent)
+                {
+                    case "Pointer":
+                        break;
+                    case "Granny":
+                        break;
+                    case "Farm":
+                        break;
+                    case "Mine":
+                        break;
+                    case "Factory":
+                        break;
+                }
+            }
+        }
     }
 }
