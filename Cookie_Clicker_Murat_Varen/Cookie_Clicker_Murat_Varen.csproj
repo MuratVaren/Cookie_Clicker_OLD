@@ -113,5 +113,16 @@
   <ItemGroup>
     <Resource Include="Assets\Images\pointer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\background.cookie.png" />
+    <Resource Include="Assets\Images\cookie2.png" />
+    <Resource Include="Assets\Images\cookie3.png" />
+    <Resource Include="Assets\Images\cookietest.png" />
+    <Resource Include="Assets\Images\kookie2.png" />
+    <Resource Include="Assets\Images\test1.png" />
+    <Resource Include="Assets\Images\test2.png" />
+    <Resource Include="Assets\Images\test3.png" />
+    <Resource Include="Assets\Images\test4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,29 +26,29 @@ namespace Cookie_Clicker_Murat_Varen
     {
         private readonly MediaPlayer tapSoundPlayer = new MediaPlayer();
         private readonly DispatcherTimer klok = new DispatcherTimer();
-        private decimal cookieCounter = 0;
+        private double cookieCounter = 0;
 
         private int pointerCounter = 0;
-        private const decimal pointerBasePrice = 15;
-        private decimal pointerPrice = 15;
+        private const double pointerBasePrice = 15;
+        private double pointerPrice = 15;
 
         private int grannyCounter = 0;
-        private const decimal grannyBasePrice = 100;
-        private decimal grannyPrice = 100;
+        private const double grannyBasePrice = 100;
+        private double grannyPrice = 100;
 
         private int farmCounter = 0;
-        private const decimal farmBasePrice = 1100;
-        private decimal farmPrice = 1100;
+        private const double farmBasePrice = 1100;
+        private double farmPrice = 1100;
 
 
         private int mineCounter = 0;
-        private const decimal mineBasePrice = 12000;
-        private decimal minePrice = 12000;
+        private const double mineBasePrice = 12000;
+        private double minePrice = 12000;
 
 
         private int FactoryCounter = 0;
-        private const decimal FactoryBasePrice = 130000;
-        private decimal FactoryPrice = 130000;
+        private const double FactoryBasePrice = 130000;
+        private double FactoryPrice = 130000;
 
         public MainWindow()
         {
@@ -59,11 +59,11 @@ namespace Cookie_Clicker_Murat_Varen
         }
         private void KlokAfgelopen(object sender, EventArgs e)
         {
-            PassiveIncome(pointerCounter, 0.001m);
-            PassiveIncome(grannyCounter, 0.01m);
-            PassiveIncome(farmCounter, 0.08m);
-            PassiveIncome(mineCounter, 0.47m);
-            PassiveIncome(FactoryCounter, 2.60m);
+            PassiveIncome(pointerCounter, 0.001);
+            PassiveIncome(grannyCounter, 0.01);
+            PassiveIncome(farmCounter, 0.08);
+            PassiveIncome(mineCounter, 0.47);
+            PassiveIncome(FactoryCounter, 2.60);
 
 
             LblCookieCount.Content = $"{cookieCounter.ToString("00.00")} cookies";
@@ -74,11 +74,21 @@ namespace Cookie_Clicker_Murat_Varen
 
         private void ImgCookie_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            BitmapImage bitmapImage =
+            new BitmapImage(new Uri("assets/Images/kookie2.png", UriKind.RelativeOrAbsolute));
+            ImgCookie.Source = bitmapImage;
             ThicknessAnimation animation = new ThicknessAnimation
             {
-                To = new Thickness(30),
-                Duration = TimeSpan.FromMilliseconds(100),
+                
+                To = new Thickness(0),
+                Duration = TimeSpan.FromMilliseconds(110),
                 FillBehavior = FillBehavior.Stop,
+            };
+            animation.Completed += (s, _) =>
+            {
+                // Change the image source after the animation is complete
+                BitmapImage newImage = new BitmapImage(new Uri("assets/Images/cookietest.png", UriKind.RelativeOrAbsolute));
+                ImgCookie.Source = newImage;
             };
             ImgCookie.BeginAnimation(Image.MarginProperty, animation);
             RandomTapSound();
@@ -133,7 +143,7 @@ namespace Cookie_Clicker_Murat_Varen
                 BtnFactory.IsEnabled = false;
             }
         }
-        public void PassiveIncome(int counter,decimal ammount)
+        public void PassiveIncome(int counter,double ammount)
         {
             cookieCounter += counter * ammount;
 
@@ -162,7 +172,7 @@ namespace Cookie_Clicker_Murat_Varen
                             cookieCounter -= pointerPrice;
                             pointerCounter++;
                             LblPointerCounter.Content = pointerCounter;
-                            pointerPrice = Math.Round(pointerCounter * 1.15m * pointerBasePrice);
+                            pointerPrice = Math.Round(pointerBasePrice * Math.Pow(1.15,pointerCounter));
                             LblPointerPrice.Content = pointerPrice;
                         }
                         break;
@@ -173,7 +183,7 @@ namespace Cookie_Clicker_Murat_Varen
                             cookieCounter -= grannyPrice;
                             grannyCounter++;
                             LblGrannyCounter.Content = grannyCounter;
-                            grannyPrice = Math.Round(grannyCounter * 1.15m * grannyBasePrice);
+                            grannyPrice = Math.Round(grannyBasePrice * Math.Pow(1.15, grannyCounter));
                             LblGrannyPrice.Content = grannyPrice;
                         }
                         break;
@@ -184,7 +194,7 @@ namespace Cookie_Clicker_Murat_Varen
                             cookieCounter -= farmPrice;
                             farmCounter++;
                             LblFarmCounter.Content = farmCounter;
-                            farmPrice = Math.Round(farmCounter * 1.15m * farmBasePrice);
+                            farmPrice = Math.Round(farmBasePrice * Math.Pow(1.15, farmCounter));
                             LblFarmPrice.Content = farmPrice;
                         }
                         break;
@@ -195,7 +205,7 @@ namespace Cookie_Clicker_Murat_Varen
                             cookieCounter -= minePrice;
                             mineCounter++;
                             LblMineCounter.Content = mineCounter;
-                            minePrice = Math.Round(mineCounter * 1.15m * mineBasePrice);
+                            minePrice = Math.Round(mineBasePrice * Math.Pow(1.15, mineCounter));
                             LblMinePrice.Content = minePrice;
                         }
                         break;
@@ -206,7 +216,7 @@ namespace Cookie_Clicker_Murat_Varen
                             cookieCounter -= FactoryPrice;
                             FactoryCounter++;
                             LblFactoryCounter.Content = FactoryCounter;
-                            FactoryPrice = Math.Round(FactoryCounter * 1.15m * FactoryBasePrice);
+                            FactoryPrice = Math.Round(FactoryBasePrice * Math.Pow(1.15, FactoryCounter));
                             LblFactoryPrice.Content = FactoryPrice;
                         }
                         break;

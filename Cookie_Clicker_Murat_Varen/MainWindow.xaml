@@ -8,7 +8,7 @@
         Title="Cookie Clicker" Height="450" Width="800">
     <!-- Achtergrond Image -->
     <Window.Background>
-        <ImageBrush ImageSource="Assets/Images/background.jpg" Stretch="Fill"/>
+        <ImageBrush ImageSource="Assets/Images/test4.png" Stretch="Fill"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -22,8 +22,8 @@
             <StackPanel VerticalAlignment="Center" >
                 <Label Name="LblCookieCount" Content="00 Cookies" 
                        HorizontalAlignment="Center" FontSize="24"/>
-                <Image Name="ImgCookie" Source="Assets/Images/Cookie.png" 
-                       Margin="10" MouseDown="ImgCookie_MouseDown">
+                <Image Name="ImgCookie" Source="Assets/Images/cookietest.png" 
+                       Margin="-20" MouseDown="ImgCookie_MouseDown">
                     <Image.Effect>
                         <DropShadowEffect/>
                     </Image.Effect>
