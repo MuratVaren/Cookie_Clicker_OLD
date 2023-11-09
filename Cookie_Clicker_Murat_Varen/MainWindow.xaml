@@ -100,9 +100,9 @@
                         <Image Grid.Column="0" Source="Assets/Images/granny.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
                             <Label Content="granny" Foreground="black" FontSize="16"/>
-                            <Label Content="100" FontWeight="Bold" />
+                            <Label Name="LblGrannyPrice" Content="100" FontWeight="Bold" />
                         </StackPanel>
-                        <Label  Grid.Column="2" Content="0" FontSize="24" 
+                        <Label  Name="LblGrannyCounter" Grid.Column="2" Content="0" FontSize="24" 
                                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Grid>
                 </Button>
@@ -121,9 +121,9 @@
                         <Image Grid.Column="0" Source="Assets/Images/farm.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
                             <Label Content="farm" Foreground="black" FontSize="16"/>
-                            <Label Content="1100" FontWeight="Bold"/>
+                            <Label Name="LblFarmPrice" Content="1100" FontWeight="Bold"/>
                         </StackPanel>
-                        <Label  Grid.Column="2" Content="0" FontSize="24" 
+                        <Label  Name="LblFarmCounter" Grid.Column="2" Content="0" FontSize="24" 
                                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Grid>
                 </Button>
@@ -142,9 +142,9 @@
                         <Image Grid.Column="0" Source="Assets/Images/mine.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
                             <Label Content="mine" Foreground="black" FontSize="16"/>
-                            <Label Content="12000" FontWeight="Bold"/>
+                            <Label Name="LblMinePrice" Content="12000" FontWeight="Bold"/>
                         </StackPanel>
-                        <Label  Grid.Column="2" Content="0" FontSize="24"
+                        <Label Name="LblMineCounter" Grid.Column="2" Content="0" FontSize="24"
                                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Grid>
                 </Button>
@@ -163,9 +163,9 @@
                         <Image Grid.Column="0" Source="Assets/Images/factory.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
                             <Label Content="factory" Foreground="black" FontSize="16"/>
-                            <Label Content="130000" FontWeight="Bold"/>
+                            <Label Name="LblFactoryPrice" Content="130000" FontWeight="Bold"/>
                         </StackPanel>
-                        <Label  Grid.Column="2" Content="0" FontSize="24"
+                        <Label Name="LblFactoryCounter" Grid.Column="2" Content="0" FontSize="24"
                                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Grid>
                 </Button>
