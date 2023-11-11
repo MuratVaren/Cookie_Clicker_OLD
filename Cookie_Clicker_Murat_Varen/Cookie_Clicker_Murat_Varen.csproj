@@ -124,5 +124,36 @@
     <Resource Include="Assets\Images\test3.png" />
     <Resource Include="Assets\Images\test4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\bluepointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\granny2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\pinkpointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\granny3.png" />
+    <Resource Include="Assets\Images\pinkpointer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\granny5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\granny6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\granny6%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\grany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\grany2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\supergrany.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

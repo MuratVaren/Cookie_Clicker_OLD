@@ -20,10 +20,11 @@
         <!-- COL 0 -->
         <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0">
             <StackPanel VerticalAlignment="Center" >
-                <Label Name="LblCookieCount" Content="00 Cookies" 
+                <Label Name="LblCookieCount" Content="00 Cookies"  
+                       HorizontalContentAlignment="Center" 
                        HorizontalAlignment="Center" FontSize="24"/>
                 <Image Name="ImgCookie" Source="Assets/Images/cookietest.png" 
-                       Margin="-20" MouseDown="ImgCookie_MouseDown">
+                       MouseDown="ImgCookie_MouseDown">
                     <Image.Effect>
                         <DropShadowEffect/>
                     </Image.Effect>
@@ -69,14 +70,18 @@
                 <Button Name="BtnPointer" Grid.Row="1" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
                         Background="Transparent" Click="BtnBuy_Click" 
-                        IsEnabled="False">
+                        IsEnabled="False" ToolTipService.ShowOnDisabled="True">
+                    <Button.ToolTip>
+                        0.1 cookies per seconde
+                    </Button.ToolTip>
+                    
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="Assets/Images/pointer.png"/>
+                        <Image Grid.Column="0" Source="Assets/Images/bluepointer.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
                             <Label Content="Pointer" Foreground="black" FontSize="16"/>
                             <Label Name="LblPointerPrice" Content="15" FontWeight="Bold"/>
@@ -90,14 +95,20 @@
                 <Button Name="BtnGranny" Grid.Row="2" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
                         Background="Transparent" Click="BtnBuy_Click"
-                        IsEnabled="False">
+                        IsEnabled="False" ToolTipService.ShowOnDisabled="True">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            1 cookie per seconde
+                        </ToolTip>
+                    </Button.ToolTip>
+                    
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="Assets/Images/granny.png"/>
+                        <Image Grid.Column="0" Source="Assets/Images/supergrany.png"/>
                         <StackPanel  Grid.Column="1" VerticalAlignment="Center">
                             <Label Content="granny" Foreground="black" FontSize="16"/>
                             <Label Name="LblGrannyPrice" Content="100" FontWeight="Bold" />
@@ -111,7 +122,13 @@
                 <Button Name="BtnFarm" Grid.Row="3" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
                         Background="Transparent" Click="BtnBuy_Click"
-                        IsEnabled="False">
+                        IsEnabled="False" ToolTipService.ShowOnDisabled="True">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            8 cookies per seconde
+                        </ToolTip>
+                    </Button.ToolTip>
+                    
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -132,7 +149,12 @@
                 <Button Name="BtnMine" Grid.Row="4" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
                         Background="Transparent" Click="BtnBuy_Click"
-                        IsEnabled="False">
+                        IsEnabled="False" ToolTipService.ShowOnDisabled="True">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            47 cookies per seconde
+                        </ToolTip>
+                    </Button.ToolTip>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
@@ -153,7 +175,12 @@
                 <Button Name="BtnFactory" Grid.Row="5" Grid.ColumnSpan="3" 
                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
                         Background="Transparent" Click="BtnBuy_Click"
-                        IsEnabled="False">
+                        IsEnabled="False" ToolTipService.ShowOnDisabled="True">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            260 cookies per seconde
+                        </ToolTip>
+                    </Button.ToolTip>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
