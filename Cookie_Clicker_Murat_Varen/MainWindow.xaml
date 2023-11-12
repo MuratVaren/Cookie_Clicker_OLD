@@ -21,7 +21,7 @@
         <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0">
             <StackPanel VerticalAlignment="Center" >
                 <Label Name="LblCookieCount" Content="00 Cookies"  
-                       HorizontalContentAlignment="Center" 
+                       HorizontalContentAlignment="Center" FontWeight="Bold"
                        HorizontalAlignment="Center" FontSize="24"/>
                 <Image Name="ImgCookie" Source="Assets/Images/cookietest.png" 
                        MouseDown="ImgCookie_MouseDown">

@@ -60,7 +60,7 @@ namespace Cookie_Clicker_Murat_Varen
             klok.Interval = new TimeSpan(0, 0, 0, 0, 10);
             klok.Start();
             IdleAnimation();
-            ColorChanger();
+            ColorAndSizeChanger();
         }
         private void KlokAfgelopen(object sender, EventArgs e)
         {
@@ -107,7 +107,7 @@ namespace Cookie_Clicker_Murat_Varen
             new BitmapImage(new Uri("assets/Images/kookie2.png", UriKind.RelativeOrAbsolute));
             ImgCookie.Source = bitmapImage;
 
-            // simple animatie 
+            // simple animatie dat thickness kan aanpassen
             ThicknessAnimation animation = new ThicknessAnimation
             {
                 To = new Thickness(15),
@@ -132,13 +132,13 @@ namespace Cookie_Clicker_Murat_Varen
             ImgCookie.Source = newImage;
         }
 
-        public void ColorChanger()
+        public void ColorAndSizeChanger()
         {
             ColorAnimationUsingKeyFrames colorAnimation = new ColorAnimationUsingKeyFrames()
             {
                 AutoReverse = true,
                 RepeatBehavior = RepeatBehavior.Forever,
-                Duration = TimeSpan.FromMilliseconds(1500)
+                Duration = TimeSpan.FromMilliseconds(6000)
             };
             colorAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Red, KeyTime.FromPercent(0.0)));
             colorAnimation.KeyFrames.Add(new LinearColorKeyFrame(Colors.Blue, KeyTime.FromPercent(0.5)));
@@ -149,7 +149,7 @@ namespace Cookie_Clicker_Murat_Varen
             {
                 From = 24,
                 To = 30,
-                Duration = TimeSpan.FromMilliseconds(300),
+                Duration = TimeSpan.FromMilliseconds(400),
                 AutoReverse = true,
                 RepeatBehavior = RepeatBehavior.Forever,
             };
